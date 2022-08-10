@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddFoodActivity">
+
+    <EditText
+        android:id="@+id/edt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+
+        android:background="@drawable/edt_fon"
+        android:gravity="start|top"
+        android:hint="@string/taom_nomi"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@id/edt_mahsulot"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_mahsulot"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/edt_fon"
+        android:gravity="start|top"
+
+        android:hint="@string/kerakli_mahsulot"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@id/edt_tayorlash"
+        app:layout_constraintTop_toBottomOf="@+id/edt_name"
+        app:layout_constraintVertical_weight="0.7"
+
+        />
+
+    <EditText
+        android:id="@+id/edt_tayorlash"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/edt_fon"
+        android:gravity="start|top"
+        android:hint="@string/taom_tayyorlash_tartibi"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_save"
+        app:layout_constraintTop_toBottomOf="@id/edt_mahsulot"
+        app:layout_constraintVertical_weight="1"
+        />
+
+    <Button
+        android:id="@+id/btn_save"
+        style="@style/btn_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/edt_tayorlash" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
